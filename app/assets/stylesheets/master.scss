@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap');
+@import "bootstrap";
+
+booyah-box {
+  -moz-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  -webkit-box-shadow: 1px 1px 2px 0 #d0d0d0;
+  box-shadow: 1px 1px 2px 0 #d0d0d0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-color: #e4e4e4 #bebebd #bebebd #e4e4e4;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  padding: 20px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin:5;
+  padding:5;
+}
+
+body {
+  background: image_url('sandpaper.png');
+  font-family: Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.navbar {
+  background: image_url('waves.png');
+  box-shadow: 5px 10px 8px 10px #888888;
+}
+
+.navbar-inverse .navbar-brand {
+  color: #0A0B0B;
+  font-family: 'Permanent Marker', cursive;
+  
+}
+
+
