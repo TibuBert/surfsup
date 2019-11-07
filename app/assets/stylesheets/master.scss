@@ -34,8 +34,38 @@ body {
   font-size:35px;
 }
 
-.banner_one{
-  background: url("Fuerte.png");
+div.polaroid {
+  width: 300px;
+
+  border: 1px solid #BFBFBF;
+  background-color: white;
+  box-shadow: 10px 10px 5px #aaaaaa;
+  text-align: center
+
 }
+
+div.rotate_right {
+  margin: 0 auto;
+  transform: rotate(7deg);
+  font-family: 'Permanent Marker', cursive;
+  
+  padding: 8px;
+}
+
+div.rotate_left {
+  margin: 0 auto;
+  transform: rotate(-8deg);
+  font-family: 'Permanent Marker', cursive;
+  
+  padding: 8px;
+}
+#weather{
+ text-align: center;
+ width: 100%; 
+ font-family: 'Permanent Marker', cursive;
+}
+
+
+
 
 

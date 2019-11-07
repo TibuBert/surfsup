@@ -11,7 +11,11 @@
 
   <body>
 
-
+<div id="weather">
+    <div id="description"></div>
+    <h1 id="temp"></h1>
+    <div id="location"></div>
+</div>
 <div class="container">
   
   <p class="text-center">Surfing Camp</p>
@@ -29,14 +33,41 @@
     </ul>
   </div>
 
-  <div class="banner_one">
-  <img src="Fuerte.png" alt="Fuerteventura" width="284" height="213">
-  <p class="caption">The pulpit rock in Lysefjorden, Norway.</p>
+  <div class="polaroid rotate_right">
+  <img src="/assets/Fuerte.jpg" alt="Fuerte" width="284" height="213" > 
+  <p class="caption">Punta Blanca, Fuerteventura</p> 
+</div>
+
+<div class="polaroid rotate_left">
+  <img src="/assets/cicer.jpg" alt="cicer" width="284" height="213">
+  <p class="caption">La Cicer, Gran Canaria</p>
+</div>
 </div>
 
     <%= yield %>
 
-
+<script type="text/javascript">
+  function weatherBalloon(  ) {
+  var key = '{yourkey}';
+  fetch('https://api.openweathermap.org/data/2.5/weather?id=2515270&appid=6aff3ead9e765f2fba53f55a1bf24f97')  
+  .then(function(resp) { return resp.json() }) // Convert data to json
+  .then(function(data) {
+    drawWeather(data); // Call drawWeather
+  })
+  .catch(function() {
+    // catch any errors
+  });
+}
+function drawWeather( d ) {
+  var celcius = Math.round(parseFloat(d.main.temp)-273.15);
+  var fahrenheit = Math.round(((parseFloat(d.main.temp)-273.15)*1.8)+32); 
+  
+  document.getElementById('description').innerHTML = d.weather[0].description;
+  document.getElementById('temp').innerHTML = celcius + '&deg;';
+  document.getElementById('location').innerHTML = d.name;
+}
+weatherBalloon()
+</script>
   </body>
 
 
